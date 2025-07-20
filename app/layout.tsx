@@ -1,13 +1,14 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "next-themes"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FarmFundr - Crowdfund Nigerian Farms | Agricultural Investment Platform",
+  title:
+    "FarmFundr - Crowdfund Nigerian Farms | Agricultural Investment Platform",
   description:
     "Crowdfund and connect directly with real Nigerian farms. Invest in sustainable agriculture, support local farmers, and earn returns while making a positive impact.",
   keywords:
@@ -44,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FarmFundr - Crowdfund Nigerian Farms",
-    description: "Invest in sustainable agriculture and support Nigerian farmers",
+    description:
+      "Invest in sustainable agriculture and support Nigerian farmers",
     images: ["/placeholder.svg?height=630&width=1200"],
     creator: "@farmfundr",
   },
@@ -62,13 +64,12 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-    generator: 'v0.dev'
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -84,5 +85,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

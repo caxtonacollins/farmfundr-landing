@@ -18,13 +18,22 @@ export default function LandingPage() {
             <span className="text-2xl font-bold text-primary">FarmFundr</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#how-it-works"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               How It Works
             </Link>
-            <Link href="#marketplace" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#marketplace"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Marketplace
             </Link>
-            <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               About
             </Link>
             <ThemeToggle />
@@ -44,19 +53,27 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                <Badge
+                  variant="secondary"
+                  className="bg-primary/10 text-primary border-primary/20"
+                >
                   🇳🇬 Supporting Nigerian Agriculture
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  Crowdfund and connect directly with <span className="text-primary">real Nigerian farms</span>
+                  Crowdfund and connect directly with{" "}
+                  <span className="text-primary">real Nigerian farms</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
-                  Invest in sustainable farming projects, support local communities, and earn returns while making a
-                  positive impact on Nigerian agriculture.
+                  Invest in sustainable farming projects, support local
+                  communities, and earn returns while making a positive impact
+                  on Nigerian agriculture.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white"
+                >
                   Fund a Farm Today
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -82,7 +99,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/hero-image.jpg?height=600&width=600"
                 alt="Nigerian farmers working in sustainable agriculture"
                 width={600}
                 height={600}
@@ -96,7 +113,9 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <p className="font-semibold">15% Average Returns</p>
-                    <p className="text-sm text-muted-foreground">Last 12 months</p>
+                    <p className="text-sm text-muted-foreground">
+                      Last 12 months
+                    </p>
                   </div>
                 </div>
               </div>
@@ -109,9 +128,12 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold">How FarmFundr Works</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              How FarmFundr Works
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Simple steps to start investing in Nigerian agriculture and supporting local farmers
+              Simple steps to start investing in Nigerian agriculture and
+              supporting local farmers
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -119,36 +141,44 @@ export default function LandingPage() {
               {
                 step: "01",
                 title: "Fund",
-                description: "Choose a verified farm project and invest the amount you're comfortable with",
+                description:
+                  "Choose a verified farm project and invest the amount you're comfortable with",
                 icon: "💰",
               },
               {
                 step: "02",
                 title: "Farm",
-                description: "Track your investment as farmers use your funds to grow crops and raise livestock",
+                description:
+                  "Track your investment as farmers use your funds to grow crops and raise livestock",
                 icon: "🌱",
               },
               {
                 step: "03",
                 title: "Harvest",
-                description: "Monitor the farming progress and harvest results through our transparent platform",
+                description:
+                  "Monitor the farming progress and harvest results through our transparent platform",
                 icon: "🚜",
               },
               {
                 step: "04",
                 title: "Payout",
-                description: "Receive your returns plus profits when the harvest is sold in the market",
+                description:
+                  "Receive your returns plus profits when the harvest is sold in the market",
                 icon: "💵",
               },
             ].map((item, index) => (
               <Card key={index} className="relative">
                 <CardHeader className="text-center">
                   <div className="text-4xl mb-4">{item.icon}</div>
-                  <div className="text-sm font-medium text-primary mb-2">Step {item.step}</div>
+                  <div className="text-sm font-medium text-primary mb-2">
+                    Step {item.step}
+                  </div>
                   <CardTitle className="text-xl">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">{item.description}</CardDescription>
+                  <CardDescription className="text-center">
+                    {item.description}
+                  </CardDescription>
                 </CardContent>
                 {index < 3 && (
                   <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2">
@@ -167,7 +197,8 @@ export default function LandingPage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold">Farm Categories</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Diversify your portfolio across different types of agricultural investments
+              Diversify your portfolio across different types of agricultural
+              investments
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -178,7 +209,7 @@ export default function LandingPage() {
                 icon: <Egg className="h-8 w-8" />,
                 returns: "12-18%",
                 duration: "6-8 months",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/layers.jpg?height=200&width=300",
               },
               {
                 title: "Crop Farming",
@@ -186,7 +217,7 @@ export default function LandingPage() {
                 icon: <Wheat className="h-8 w-8" />,
                 returns: "15-25%",
                 duration: "4-6 months",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/cash-crops.jpg?height=200&width=300",
               },
               {
                 title: "Fish Farming",
@@ -194,7 +225,7 @@ export default function LandingPage() {
                 icon: <Fish className="h-8 w-8" />,
                 returns: "20-30%",
                 duration: "6-9 months",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/catfish.jpg?height=200&width=300",
               },
               {
                 title: "BSF Farming",
@@ -202,10 +233,13 @@ export default function LandingPage() {
                 icon: <Sprout className="h-8 w-8" />,
                 returns: "25-35%",
                 duration: "3-4 months",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/bsf.webp?height=200&width=300",
               },
             ].map((category, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow cursor-pointer">
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <Image
                     src={category.image || "/placeholder.svg"}
@@ -225,8 +259,12 @@ export default function LandingPage() {
                 <CardContent>
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-sm text-muted-foreground">Expected Returns</p>
-                      <p className="font-semibold text-primary">{category.returns}</p>
+                      <p className="text-sm text-muted-foreground">
+                        Expected Returns
+                      </p>
+                      <p className="font-semibold text-primary">
+                        {category.returns}
+                      </p>
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Duration</p>
@@ -244,7 +282,9 @@ export default function LandingPage() {
       <section id="marketplace" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold">Active Farm Projects</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              Active Farm Projects
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Browse and invest in verified farming projects across Nigeria
             </p>
@@ -259,7 +299,7 @@ export default function LandingPage() {
                 progress: 72,
                 returns: "18%",
                 duration: "5 months",
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/musa.jpg?height=200&width=400",
               },
               {
                 title: "Catfish Production - Lagos State",
@@ -269,7 +309,7 @@ export default function LandingPage() {
                 progress: 79,
                 returns: "22%",
                 duration: "7 months",
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/catfish-tanks.avif?height=200&width=400",
               },
               {
                 title: "Poultry Farm - Ogun State",
@@ -279,10 +319,13 @@ export default function LandingPage() {
                 progress: 81,
                 returns: "15%",
                 duration: "6 months",
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/potry.jpg?height=200&width=400",
               },
             ].map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-shadow"
+              >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -291,7 +334,9 @@ export default function LandingPage() {
                     height={200}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-4 right-4 bg-primary text-white">{project.returns} Returns</Badge>
+                  <Badge className="absolute top-4 right-4 bg-primary text-white">
+                    {project.returns} Returns
+                  </Badge>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">{project.title}</CardTitle>
@@ -315,8 +360,13 @@ export default function LandingPage() {
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{project.duration}</span>
-                    <Button size="sm" className="bg-primary hover:bg-primary/90">
+                    <span className="text-sm text-muted-foreground">
+                      {project.duration}
+                    </span>
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90"
+                    >
                       Invest Now
                     </Button>
                   </div>
@@ -337,9 +387,12 @@ export default function LandingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold">What Our Community Says</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              What Our Community Says
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real stories from farmers and investors who are part of the FarmFundr family
+              Real stories from farmers and investors who are part of the
+              FarmFundr family
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -350,7 +403,7 @@ export default function LandingPage() {
                 content:
                   "FarmFundr has allowed me to diversify my investment portfolio while supporting local farmers. I've earned consistent returns and feel good about the impact.",
                 rating: 5,
-                avatar: "/placeholder.svg?height=60&width=60",
+                avatar: "/investor1.webp?height=60&width=60",
               },
               {
                 name: "Abdullahi Garba",
@@ -358,7 +411,7 @@ export default function LandingPage() {
                 content:
                   "Through FarmFundr, I was able to expand my rice farm and increase production by 300%. The platform connected me with investors who believe in my vision.",
                 rating: 5,
-                avatar: "/placeholder.svg?height=60&width=60",
+                avatar: "/investor2.jpg?height=60&width=60",
               },
               {
                 name: "Sarah Ogundimu",
@@ -366,7 +419,7 @@ export default function LandingPage() {
                 content:
                   "The transparency and regular updates from farmers make me confident in my investments. I've already reinvested my returns into new projects.",
                 rating: 5,
-                avatar: "/placeholder.svg?height=60&width=60",
+                avatar: "/investor3.jpg?height=60&width=60",
               },
             ].map((testimonial, index) => (
               <Card key={index}>
@@ -380,18 +433,25 @@ export default function LandingPage() {
                       className="rounded-full"
                     />
                     <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+                      <CardTitle className="text-lg">
+                        {testimonial.name}
+                      </CardTitle>
                       <CardDescription>{testimonial.role}</CardDescription>
                     </div>
                   </div>
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground italic">"{testimonial.content}"</p>
+                  <p className="text-muted-foreground italic">
+                    "{testimonial.content}"
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -404,9 +464,12 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">Join the Waitlist</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold">
+                Join the Waitlist
+              </h2>
               <p className="text-xl opacity-90">
-                Be the first to know when we launch new farm projects and investment opportunities
+                Be the first to know when we launch new farm projects and
+                investment opportunities
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -415,12 +478,17 @@ export default function LandingPage() {
                 placeholder="Enter your email address"
                 className="bg-white text-black border-0 flex-1"
               />
-              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="bg-white text-primary hover:bg-gray-100"
+              >
                 Join Waitlist
               </Button>
             </div>
             <p className="text-sm opacity-75">
-              Join 2,000+ people already on our waitlist. No spam, unsubscribe anytime.
+              Join 2,000+ people already on our waitlist. No spam, unsubscribe
+              anytime.
             </p>
           </div>
         </div>
@@ -436,29 +504,42 @@ export default function LandingPage() {
                 <span className="text-xl font-bold">FarmFundr</span>
               </div>
               <p className="text-muted-foreground">
-                Connecting investors with Nigerian farmers for sustainable agriculture and profitable returns.
+                Connecting investors with Nigerian farmers for sustainable
+                agriculture and profitable returns.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Platform</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     How It Works
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Farm Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Marketplace
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Returns Calculator
                   </Link>
                 </li>
@@ -468,22 +549,34 @@ export default function LandingPage() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Careers
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Press
                   </Link>
                 </li>
@@ -493,22 +586,34 @@ export default function LandingPage() {
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Help Center
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-primary transition-colors"
+                  >
                     Terms of Service
                   </Link>
                 </li>
@@ -516,10 +621,12 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} FarmFundr. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} FarmFundr. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
